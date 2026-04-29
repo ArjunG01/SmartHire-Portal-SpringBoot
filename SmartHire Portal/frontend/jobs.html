@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartHire Portal - Public Jobs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <div style="background: #f3f4f6; min-height: 100vh" class="py-5">
+        <div class="container">
+            <div class="mb-4">
+                <h2 class="fw-bold">Find your next role</h2>
+                <p class="text-muted" id="jobsCount">Browse open positions</p>
+            </div>
+
+            <div class="row">
+                <!-- Sidebar Filters -->
+                <div class="col-md-3">
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="fw-bold mb-3">Filters</h5>
+
+                            <div class="mb-4">
+                                <label class="form-label fw-medium small">Search</label>
+                                <input type="text" id="filterKeyword" placeholder="Job title, keywords" class="form-control mb-2">
+                                <input type="text" id="filterLocation" placeholder="City, state, or zip" class="form-control">
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label fw-medium small">Job Type</label>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input filter-type" type="checkbox" value="Full-time" id="type-Full-time">
+                                    <label class="form-check-label" for="type-Full-time">Full-time</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input filter-type" type="checkbox" value="Part-time" id="type-Part-time">
+                                    <label class="form-check-label" for="type-Part-time">Part-time</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input filter-type" type="checkbox" value="Contract" id="type-Contract">
+                                    <label class="form-check-label" for="type-Contract">Contract</label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input filter-type" type="checkbox" value="Internship" id="type-Internship">
+                                    <label class="form-check-label" for="type-Internship">Internship</label>
+                                </div>
+                            </div>
+                            <button id="resetFilters" class="btn btn-outline-secondary w-100 btn-sm">Reset Filters</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job List -->
+                <div class="col-md-9" id="jobsListContainer">
+                    <div class="text-center py-5">Loading jobs...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/jobs.js"></script>
+</body>
+</html>

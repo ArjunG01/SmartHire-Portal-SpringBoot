@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartHire Portal - Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <div class="content">
+        <!-- Hero Section -->
+        <div class="hero-section mb-5 d-flex align-items-center" style="min-height: 600px; background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-md-9">
+                        <h1 class="display-4 fw-bold mb-4 text-white">Find the Job That Fits Your Life</h1>
+                        <p class="lead mb-5 text-white opacity-75">Millions of people are searching for jobs, salary information, company reviews, and interview questions.</p>
+
+                        <div class="card p-2 border-0 shadow-lg rounded-pill" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px)">
+                            <div class="card-body p-2">
+                                <form id="searchForm">
+                                    <div class="d-flex flex-column flex-md-row gap-2">
+                                        <input
+                                            type="text"
+                                            id="keywordInput"
+                                            class="form-control border-0 rounded-pill"
+                                            style="min-height: 55px"
+                                            placeholder="Job title, keywords, or company"
+                                        />
+                                        <button type="submit" class="btn btn-warning btn-lg px-5 rounded-pill fw-bold text-dark">
+                                            Search Jobs
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 text-white opacity-75 small">
+                            <strong>Popular Searches:</strong> Java, React, Manager, Remote
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="container mb-5 py-4">
+            <h3 class="fw-bold mb-4 text-center">Explore by Category</h3>
+            <div class="row justify-content-center" id="categories-container">
+            </div>
+        </div>
+
+        <!-- Featured Jobs -->
+        <div class="bg-light py-5">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-end mb-4">
+                    <h2 class="fw-bold">Latest Job Openings</h2>
+                    <a href="jobs.html" class="btn btn-outline-primary rounded-pill px-4">See All Jobs</a>
+                </div>
+
+                <div class="row" id="featuredJobsContainer">
+                    <div class="col-12 text-center text-muted" id="featuredJobsLoading">Loading jobs...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats / CTA -->
+        <div class="container py-5 text-center">
+            <h2 class="fw-bold mb-5">Trusted by leading companies</h2>
+            <div class="row justify-content-center mb-5 grayscale-logos opacity-50">
+                <div class="col-4 col-md-2 mb-3"><h3>Google</h3></div>
+                <div class="col-4 col-md-2 mb-3"><h3>Microsoft</h3></div>
+                <div class="col-4 col-md-2 mb-3"><h3>Amazon</h3></div>
+                <div class="col-4 col-md-2 mb-3"><h3>Spotify</h3></div>
+                <div class="col-4 col-md-2 mb-3"><h3>Netflix</h3></div>
+            </div>
+
+            <div class="card bg-dark text-white rounded-4 overflow-hidden p-5 text-center">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <h2 class="display-6 fw-bold mb-3">Ready to start your career?</h2>
+                        <p class="lead opacity-75 mb-4">Join thousands of job seekers and find your dream job today.</p>
+                        <a href="register.html">
+                            <button class="btn btn-primary btn-lg px-5 rounded-pill">Create Account</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>
